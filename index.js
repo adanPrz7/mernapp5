@@ -31,6 +31,8 @@ const QuizRouter = require("./routes/quiz");
 //
 app.use("/", express.static('dist', {redirect: false}));
 
+app.use('/public', express.static(path.join(__dirname, 'public')));
+
 app.use("/api/user", UserRouter);
 app.use("/api/quiz", QuizRouter);
 
